@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Image Slider</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+      background-color: #f4f4f4;
+    }
+
+    #slider {
+      max-width: 600px;
+      margin: auto;
+      position: relative;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .btn-container {
+      margin-top: 15px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 0 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Simple Image Slider</h1>
+
+  <div id="slider">
+    <img id="sliderImage" src="" alt="Slider Image">
+  </div>
+
+  <div class="btn-container">
+    <button id="prevBtn">Previous</button>
+    <button id="nextBtn">Next</button>
+  </div>
+
+  <script>
+    // Array of image URLs (use your own image links if desired)
+    const images = [
+      "https://via.placeholder.com/600x300/007bff/ffffff?text=Image+1",
+      "https://via.placeholder.com/600x300/28a745/ffffff?text=Image+2",
+      "https://via.placeholder.com/600x300/f39c12/ffffff?text=Image+3",
+      "https://via.placeholder.com/600x300/dc3545/ffffff?text=Image+4"
+    ];
+
+    let currentIndex = 0; // Track the current image index
+    const sliderImage = document.getElementById("sliderImage");
+
+    // Function to update image source
+    function updateImage() {
+      sliderImage.src = images[currentIndex];
+    }
+
+    // Event listeners for navigation
+    document.getElementById("prevBtn").addEventListener("click", function () {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateImage();
+    });
+
+    document.getElementById("nextBtn").addEventListener("click", function () {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateImage();
+    });
+
+    // Load the first image on page load
+    window.onload = updateImage;
+  </script>
+
+</body>
+</html>

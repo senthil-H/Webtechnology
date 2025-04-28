@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Real-Time Character Counter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      text-align: center;
+    }
+
+    textarea {
+      width: 80%;
+      height: 150px;
+      font-size: 16px;
+      padding: 10px;
+      margin-top: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+
+    #charCount {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Real-Time Character Counter</h1>
+
+  <textarea id="textInput" placeholder="Start typing here..."></textarea>
+  <div id="charCount">Characters: 0</div>
+
+  <script>
+    // Get textarea and counter display elements
+    const textInput = document.getElementById('textInput');
+    const charCount = document.getElementById('charCount');
+
+    // Listen for input events and update the character count
+    textInput.addEventListener('input', function () {
+      const count = textInput.value.length;
+      charCount.textContent = 'Characters: ' + count;
+    });
+  </script>
+
+</body>
+</html>

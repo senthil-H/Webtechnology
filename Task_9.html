@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show & Hide Password</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        #passwordInput {
+            padding: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+            width: 200px;
+        }
+
+        #toggleButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #toggleButton:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Show & Hide Password</h1>
+    <div class="container">
+        <input type="password" id="passwordInput" placeholder="Enter your password">
+        <button id="toggleButton">Show</button>
+    </div>
+
+    <script>
+        // Select the input field and button
+        const passwordInput = document.getElementById('passwordInput');
+        const toggleButton = document.getElementById('toggleButton');
+
+        // Function to toggle password visibility
+        toggleButton.addEventListener('click', function () {
+            // Check the current input type
+            if (passwordInput.type === 'password') {
+                // Change to text type and update button text to 'Hide'
+                passwordInput.type = 'text';
+                toggleButton.textContent = 'Hide';
+            } else {
+                // Change back to password type and update button text to 'Show'
+                passwordInput.type = 'password';
+                toggleButton.textContent = 'Show';
+            }
+        });
+    </script>
+
+</body>
+
+</html>

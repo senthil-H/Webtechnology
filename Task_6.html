@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar-custom {
+            background-color: #007bff;
+        }
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link {
+            color: white;
+        }
+
+        .blog-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .blog-card {
+            margin-bottom: 30px;
+        }
+
+        .blog-card .card-body {
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        .blog-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .travel-carousel img {
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .packing-tips,
+        .destinations {
+            margin-top: 30px;
+        }
+
+        .destination-card {
+            margin-bottom: 20px;
+        }
+
+        .subscribe-form input,
+        .subscribe-form button {
+            width: 100%;
+            padding: 10px;
+        }
+
+        .subscribe-form button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .subscribe-form button:hover {
+            background-color: #218838;
+        }
+
+        .pack-tips ul {
+            list-style-type: square;
+        }
+
+        .pack-tips li {
+            margin-bottom: 10px;
+        }
+
+        .destination-card img {
+            max-height: 250px;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            .destination-card img {
+                max-height: 200px;
+            }
+        }
+
+        /* Hover effects */
+        .card-title:hover {
+            color: #007bff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" href="#">Travel Blog</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#destinations">Destinations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#subscribe">Subscribe</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Travel Photo Carousel -->
+    <div id="travelCarousel" class="carousel slide travel-carousel" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://via.placeholder.com/1200x400" class="d-block w-100" alt="Travel Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/1200x400" class="d-block w-100" alt="Travel Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/1200x400" class="d-block w-100" alt="Travel Image 3">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#travelCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#travelCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- Blog Posts Section -->
+    <div class="container mt-5" id="blog">
+        <h2 class="blog-title">Recent Blog Posts</h2>
+        <div class="row">
+            <!-- Blog Post Card 1 -->
+            <div class="col-md-4">
+                <div class="card blog-card">
+                    <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Blog Post 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Exploring Bali's Beautiful Beaches</h5>
+                        <p class="card-text">Bali is a paradise for beach lovers. Here's a guide to the best beaches and
+                            activities.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Blog Post Card 2 -->
+            <div class="col-md-4">
+                <div class="card blog-card">
+                    <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Blog Post 2">
+                    <div class="card-body">
+                        <h5 class="card-title">A Foodie's Guide to Italy</h5>
+                        <p class="card-text">From pasta to pizza, Italy is a dream for food lovers. Join me on a culinary
+                            adventure.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Blog Post Card 3 -->
+            <div class="col-md-4">
+                <div class="card blog-card">
+                    <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Blog Post 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Hiking the Swiss Alps</h5>
+                        <p class="card-text">If you're an adventure enthusiast, the Swiss Alps offer some of the best
+                            hiking experiences.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Travel Destinations Section -->
+    <div class="container mt-5" id="destinations">
+        <h2>Must-Visit Destinations</h2>
+        <div class="row">
+            <!-- Destination Card 1 -->
+            <div class="col-md-4">
+                <div class="card destination-card">
+                    <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Destination 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Paris, France</h5>
+                        <p class="card-text">The City of Light is a must-visit for its history, architecture, and amazing
+                            cuisine.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Destination Card 2 -->
+            <div class="col-md-4">
+                <div class="card destination-card">
+                    <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Destination 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Kyoto, Japan</h5>
+                        <p class="card-text">Discover ancient temples, stunning gardens, and Japanese culture in Kyoto.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Destination Card 3 -->
+            <div class="col-md-4">
+                <div class="card destination-card">
+                    <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Destination 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Cape Town, South Africa</h5>
+                        <p class="card-text">A beautiful city known for its natural beauty, beaches, and Table Mountain.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Packing Tips Section -->
+    <div class="container mt-5 packing-tips">
+        <h2>Packing Tips</h2>
+        <ul class="pack-tips">
+            <li>Always pack light; you don't need as much as you think.</li>
+            <li>Roll your clothes instead of folding them to save space.</li>
+            <li>Bring a portable charger for your devices.</li>
+            <li>Don't forget your sunscreen and medications.</li>
+            <li>Pack a travel pillow for long flights or train rides.</li>
+        </ul>
+    </div>
+
+    <!-- Subscription Section -->
+    <div class="container mt-5" id="subscribe">
+        <h2>Subscribe to Our Newsletter</h2>
+        <form class="subscribe-form" action="#">
+            <div class="form-group">
+                <label for="email">Enter your email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Your Email">
+            </div>
+            <button type="submit" class="btn">Subscribe</button>
+        </form>
+    </div>
+
+    <!-- Embed Travel Destination Video -->
+    <div class="container mt-5">
+        <h2>Discover Beautiful Bali</h2>
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+    <script src

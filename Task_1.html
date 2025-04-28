@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><b>Annual TechFest 2025 - Uniting Innovation</b></title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    nav {
+      background-color: #333;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    nav a {
+      color: white;
+      margin-right: 15px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      margin-bottom: 60px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #999;
+      padding: 8px;
+      text-align: center;
+    }
+    form label {
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#registration">Registration</a>
+    <a href="#gallery">Gallery</a>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h1><u><b>Welcome to the <i>Annual TechFest 2025</i></b></u></h1>
+    <p>
+      Join us for an exciting <b>Annual TechFest 2025</b> on 
+      <i>September 12th–14th, 2025</i> at <u>Innovators' Hall, TechCity</u>. 
+      This event brings together brilliant minds, cutting-edge tech, and 
+      hands-on experiences to spark innovation and collaboration!
+    </p>
+    <p>
+      Jump to:
+      <a href="#schedule">Schedule</a> |
+      <a href="#registration">Register</a> |
+      <a href="#gallery">Gallery</a>
+    </p>
+  </section>
+
+  <!-- Schedule Section -->
+  <section id="schedule">
+    <h2>Event Schedule</h2>
+    <table>
+      <tr>
+        <th>Time</th>
+        <th>Activity</th>
+        <th>Venue</th>
+      </tr>
+      <tr>
+        <td>9:00 AM - 10:00 AM</td>
+        <td>Opening Ceremony</td>
+        <td>Main Auditorium</td>
+      </tr>
+      <tr>
+        <td colspan="3"><b>Keynote Session by Industry Leaders</b></td>
+      </tr>
+      <tr>
+        <td>11:00 AM - 12:30 PM</td>
+        <td>AI & Robotics Workshop</td>
+        <td>Lab 1</td>
+      </tr>
+      <tr>
+        <td>2:00 PM - 4:00 PM</td>
+        <td>Hackathon Begins</td>
+        <td>Conference Hall</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Registration Section -->
+  <section id="registration">
+    <h2>Participant Registration Form</h2>
+    <form action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label for="preferences">Event Preferences:</label>
+      <textarea id="preferences" name="preferences" rows="4" cols="30"></textarea>
+
+      <label for="category">Participation Category:</label>
+      <select id="category" name="category">
+        <option value="speaker">Speaker</option>
+        <option value="attendee">Attendee</option>
+        <option value="volunteer">Volunteer</option>
+      </select>
+
+      <p>Payment Method:</p>
+      <input type="radio" id="credit" name="payment" value="credit" required>
+      <label for="credit">Credit Card</label><br>
+      <input type="radio" id="paypal" name="payment" value="paypal">
+      <label for="paypal">PayPal</label><br>
+
+      <input type="checkbox" id="agree" name="agree" required>
+      <label for="agree">I agree to the terms and conditions</label><br><br>
+
+      <button type="submit">Submit Registration</button>
+    </form>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Event Highlights</h2>
+
+    <p><b>Audio Highlights from 2024:</b></p>
+    <audio controls>
+      <source src="event_highlight.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <p><b>Watch the Event Recap Video:</b></p>
+    <video width="640" height="360" controls poster="video_thumbnail.jpg">
+      <source src="event_recap.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+</body>
+</html>
